@@ -1,1 +1,49 @@
 {% extends 'index.html' %}
+ 
+
+
+
+{% block second %}
+
+{{ student_records }}
+<br>
+
+<table style="width: 80%;border :1px solid black; border-collapse: collapse  ;">
+    <tr style="border :1px solid black; border-collapse: collapse  ;">
+    <th style="border :1px solid black; border-collapse: collapse  ;">ID</th>
+    <th style="border :1px solid black; border-collapse: collapse  ;">Name</th>
+    <th style="border :1px solid black; border-collapse: collapse  ;">Address</th>
+    <th style="border :1px solid black; border-collapse: collapse  ;">Contact</th>
+
+
+    </tr>
+{% for i in student_records %}
+   <tr style="border :1px solid black; border-collapse: collapse  ;">
+   {% for j in i %}
+  
+   <td style="border :1px solid black; border-collapse: collapse  ;">{{j}}</td>  
+
+
+   {% endfor %}
+  </tr>
+{% endfor %}
+</table>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock second %}
+
+
+{% block first %}
+ 
+<h1>THis is first page</h1>
+
+{% endblock first %}
